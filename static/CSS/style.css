@@ -8,26 +8,16 @@ html {
 
 body {
     margin: 0;
+    padding-top: 5vh;
 }
 
-h1 {
-    font-size: 3.5em;
-}
+h1 {font-size: 3.5em;}
 
-h2 {
-    font-size: 2.7em;
-}
+h2 {font-size: 2.7em;}
 
-p {
-    font-size: 1.25em;
-}
+p {font-size: 1.25em;}
 
 /* ID > CLASS > ELEMENT*/
-
-.container {
-    max-width: 1400px;
-    margin: auto;
-}
 
 header {
     background-color: #2192d6;
@@ -41,28 +31,6 @@ header {
     font-size: 1.6em;
 }*/
 
-header .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-header a {
-    padding: 5px 12px;
-    text-decoration: none;
-    font-weight: bold;
-    color: black;
-}
-
-header a:hover {
-    color: #a49e7e;
-}
-
-header #logSai {
-    width: 4em;
-    height: 4em;
-}
-
 #mainInfo {
     display: flex;
     align-items: center;
@@ -75,29 +43,8 @@ header #logSai {
     background-position: center center;
 }
 
-#mainInfo h1,
-h2,
-p {
+#mainInfo h1, h2, p {
     color: #a49e7e;
-}
-
-
-section .carousel {
-    display: flex;
-    overflow-x: scroll;
-    width: 60%;
-    text-align: center;
-    padding: 200px 12px;
-}
-
-
-.carousel::-webkit-scrollbar {
-    height: 12px;
-}
-
-.carousel::-webkit-scrollbar-thumb {
-    background-color: #cf0000;
-    border-radius: 5px;
 }
 
 section .imgGalery {
@@ -129,23 +76,8 @@ section .imgGalery {
 
 @media (min-width:720px) {
 
-    header {
-        position: fixed;
-        width: 100%;
-    }
-
-    header .container {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
     #mainInfo h1 {
         font-size: 5em;
-    }
-
-    section>.carousel {
-        display: flex;
-        justify-content: space-evenly;
     }
 
     section .container {
@@ -157,7 +89,7 @@ section .imgGalery {
     #aboutSection .center {
         width: 50%;
         max-width: 600px;
-        text-align: initial;
+        text-align: center      ;
         padding-left: 30px;
         display: flex;
         align-items: center;
