@@ -1,0 +1,176 @@
+@import url("/static/CSS/style.css");
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 3.5em;
+}
+
+h2 {
+    font-size: 2.7em;
+}
+
+p {
+    font-size: 1.25em;
+}
+
+
+/* ID > CLASS > ELEMENT*/
+
+section {
+    margin: auto;
+    max-width: 1280px;
+    border-spacing: 180vh;
+}
+
+header {
+    background-color: #e4ffd4;
+    z-index: 9999;
+    /*Use for up pose */
+}
+
+header .logo {
+    margin: 0;
+    padding: 10px 15px;
+    font-weight: bold;
+    color: #6e8f85;
+    font-size: 1.5em;
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header a {
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover {
+    color: #a49e7e;
+}
+
+header #logSai {
+    width: 2.5em;
+    height: 2.5em;
+}
+
+#mainInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(/static/IMG/First_img.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#mainInfo h1,
+h2,
+p {
+    color: #a49e7e;
+    max-width: 40%;
+}
+
+.carousel-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+section .imgGalery {
+    width: 300px;
+    text-align: center;
+}
+
+#aboutSection {
+    background-color: #ebe7a7;
+    text-align: center;
+    width: 100%;
+    overflow: auto;
+}
+
+#aboutSection div {
+    width: 49%;
+    float: left;
+}
+
+#aboutSection img {
+    width: 300px;
+    height: auto;
+    padding-top: 10px;
+}
+
+#center {
+    color: #60f709;
+}
+
+#tourSection {
+    background-color: #6e8f85;
+}
+
+
+@media (min-width:720px) {
+
+    header {
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #mainInfo h1 {
+        font-size: 5em;
+    }
+
+    section>.carousel {
+        position: center;
+    }
+
+    section .container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+
+    #aboutSection .center {
+        width: 50%;
+        max-width: 600px;
+        text-align: center;
+        padding-left: 30px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .carousel-inner {
+        min-height: 100vh;
+    }
+
+    footer .container {
+        justify-content: flex-end;
+    }
+}

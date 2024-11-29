@@ -1,0 +1,13 @@
+/////////////////////////////////
+/// 1. Patterns for Carousel
+/// /////////////////////////////
+
+$carousel_width: 100%;
+
+///////////////////////////
+/// 2. Changing variabls
+//////////////////////////
+
+$carousel-control-width: $carousel_width; 
+
+@import "../lib/bootstrap/scss/bootstrap";
