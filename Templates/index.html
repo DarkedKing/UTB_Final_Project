@@ -67,9 +67,9 @@
                 <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body"></div>
                     <figure>
-                        <img src="" alt="Pontoon">
-                        <figcaption>The Pontoon it's a maritime activity guided by a quealified person, this activity
-                            normally had a minium period of time of <time datetime="4H">4H</time> to <time
+                        <img src="/static/IMG/pontoonRent.jpg" alt="Pontoon">
+                        <figcaption>The Pontoon it's a maritime activity guided by a qualified person, this activity
+                            normally had a minimum period of time of <time datetime="4H">4H</time> to <time
                                 datetime="8H">8H</time></figcaption>
                     </figure>
                 </div>
@@ -85,11 +85,10 @@
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         <figure>
-                            <img src="" alt="Jetski">
+                            <img src="/static/IMG/jetsky.jpeg" alt="Jetski">
                             <figcaption>
                                 Is an acuatic sport for max of two person peer vehicle, this adventure had a limited
-                                time of
-                                <time datetime="PT40M">40M</time>, you had a range where you can move freely.
+                                time of <time datetime="PT40M">40M</time>, you had a range where you can move freely.
                             </figcaption>
                         </figure>
                     </div>
@@ -166,6 +165,7 @@
 
 
     <section id="aboutSection" class="container">
+        <h1>About Us</h1>
         <div class="container" id="pad_down">
             <p>
                 it is an enterprise of service with 5 Years on the island, providing to his
@@ -202,7 +202,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 mb-4 mb-sm-0">
                 <div class="card" style="width: 18rem;">
                     <img src="/static/IMG/Hoofman.jfif" class="card-img-top" alt="Natacha Hoofman">
                     <div class="card-body">
@@ -229,7 +229,7 @@
     <section id="formSection" class="container">
         <form id="formContact" method="get">
             <fieldset>
-                <legend>Information</legend>
+                <legend class="texted">Contact Us</legend>
 
                 <label for="clientFirstName">
                     First Name:
@@ -245,7 +245,7 @@
                     Nacionality:
                     <input type="text" name="clientNacionality" id="clientNacionality" placeholder="Colombian">
                 </label>
-
+                <br><br>
                 <label for="clientEmail">
                     Email:
                     <input type="email" name="clientEmail" id="clientEmail">
@@ -257,7 +257,7 @@
                 </label>
 
                 <label for="services">Tour Service
-                    <select id="selectTours" size="2" multiple required>
+                    <select id="selectTours" required>
                         <option value="Aquiarium">Aquiarium</option>
                         <option value="Cothoon Cay">Cothoon Cay</option>
                         <option value="Snooror Cay">Snooror Cay</option>
@@ -267,6 +267,7 @@
                         <option value="Crab Cay">Crab Cay</option>
                     </select>
                 </label>
+                <br><br>
 
                 <label for="selectDays">
                     Days
@@ -281,10 +282,11 @@
                 </label>
 
                 <label for="selectUnderage">
-                    Underage!?
+                    Any Underage!?<br>
                     <input type="checkbox" name="underage" id="underage">
                 </label>
             </fieldset>
+            <br>
             <button type="submit">Submit</button>
         </form>
     </section>
@@ -292,6 +294,15 @@
 
     <footer>
         <div class="container">
+            <ul>
+                <li><a href="https://twitter.com/julesforrest">Twitter</a></li>
+                <li><a href="https://codepen.io/julesforrest">Instagram</a></li>
+                <li><a href="mailto:mikrotikshaddy@gmail.com">Email</a></li>
+                <li><a href="https://github.com/DarkedKing">Github</a></li>
+                <li>
+                    <p>👋</p>
+                </li>
+            </ul>
             <p>&copy; D4rk'C0dd3r</p>
         </div>
     </footer>
@@ -300,8 +311,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
         </script>
-
-
 </body>
 
 </html>

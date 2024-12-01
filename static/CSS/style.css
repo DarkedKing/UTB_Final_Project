@@ -10,12 +10,33 @@ html {
 body {
     margin: 0;
     height: 100vh;
-    background-color: #ffffc2;  
+    background-color: #ffffc2;
 }
 
-h1 {font-size: 3.5em;}
+footer{
+    background-color: rgb(230,230,230);
+}
 
-h2 {font-size: 2.7em;}
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgb(100,100,100);
+}
+
+footer > ul{
+        display: inline-grid;
+        grid-auto-flow: row;
+        grid-gap: 24px;
+        justify-items: center;
+        margin: auto;
+}
+
+footer .container{
+    height: 9%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
 
 p {
     margin-top: 1px;
@@ -27,21 +48,24 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: justify;
     flex-direction: column;
     height: 90vh;
     background-image: linear-gradient(0deg,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)),
-    url(/static/IMG/First_img.webp);
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)),
+        url(/static/IMG/First_img.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-}   
+}
 
-#mainInfo  .margin_full{
+#mainInfo .margin_full {
     color: #d1ffc2;
     width: 50%;
+}
+
+#mainInfo>h1 {
+    font-size: 1em;
 }
 
 #aboutSection {
@@ -66,30 +90,106 @@ p {
     color: black;
 }
 
-@media (min-width:768px) {
+#formSection {
+    background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+}
 
-    #mainInfo h1 {
-        font-size: 5em;
-    }
+#formsection .tested {
+    text-align: center;
+    font-size: 41px;
+    font-weight: 600;
+    background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
+    -webkit-text-fill-color: transparent;
+}
 
-    section .container {
-        display: grid;
-        justify-content: center;
-        background-color: #d1ffc2;
-    }
+#formSection input {
+    border: 1.5px solid #000;
+    border-radius: 0.5rem;
+    box-shadow: 2.5px 3px 0 #000;
+    padding: 2px 12px;
+}
 
-    #aboutSection div {
-        width: 50%;
-        float: left;
-    }
+#formSection input:focus {
+    background-color: #e0ffc2;
+    box-shadow: 5.5px 7px 0 black;
+}
 
-    #aboutSection #pad_down{
-        padding-bottom: 160px;
-    }
+#formSection input[type=text] {
+    width: 100%;
+    padding: 2px 12px;
+}
 
-    footer .container {
-        justify-content: flex-end;
-    }
+#formSection input[type=checkbox] {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    appearance: none;
+    background-color: #bbb;
+    transition: all .3s;
+}
+
+#formSection input[type=checkbox]::before {
+    content: '';
+    position: absolute;
+    border: solid #fff;
+    display: block;
+    width: .3em;
+    height: .6em;
+    border-width: 0 .2em .2em 0;
+    z-index: 1;
+    opacity: 0;
+    right: calc(50% - .3em);
+    top: calc(50% - .6em);
+    transform: rotate(0deg);
+    transition: all .3s;
+    transform-origin: center center;
+}
+
+#formSection input[type=checkbox]:checked {
+    animation: a .3s ease-in forwards;
+    background-color: rgb(120, 190, 120);
+}
+
+#formSection input[type=checkbox]:checked::before {
+    opacity: 1;
+    transform: rotate(405deg);
+}
+
+#formSection select {
+    width: 100%;
+    height: auto;
+    padding: 2px 12px;
+    font-size: 1rem;
+    border: 1.5px solid #000;
+    border-radius: 0.5rem;
+    box-shadow: 2.5px 3px 0 #000;
+    outline: none;
+    transition: ease 0.25s;}
+
+
+#formSection button {
+    background-color: aquamarine;
+    border: none;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#formSection input[type=email] {
+    width: 100px;
+    height: auto;
+    font-size: 1rem;
+    border: 1.5px solid #000;
+    border-radius: 0.5rem;
+    box-shadow: 2.5px 3px 0 #000;
+    outline: none;
+    transition: ease 0.25s;
+}
+
+#formSection input[type=email]:focus {
+    box-shadow: 5.5px 7px 0 black;
 }
 
 @media (max-width: 766px) {
@@ -101,7 +201,7 @@ p {
     }
 
     #mainInfo {
-        font-size: 0.8em;        
+        font-size: 0.8em;
         padding-top: 6vh;
     }
 
@@ -118,4 +218,73 @@ p {
         justify-content: center center;
     }
 
+    #formSection button {
+        width: 100%;
+    }
+
+}
+
+@media (min-width:768px) and (max-width:991px) {
+
+    #mainInfo h1 {
+        font-size: 3em;
+    }
+
+    section .container {
+        display: grid;
+        justify-content: center;
+        background-color: #d1ffc2;
+    }
+
+    #aboutSection div {
+        width: 50%;
+        float: left;
+    }
+
+    #aboutSection #pad_down {
+        padding-bottom: 160px;
+    }
+
+    footer .container {
+        justify-content: flex-end;
+    }
+
+@media (min-width:992px) {
+
+
+    section .container {
+        display: grid;
+        justify-content: center;
+        background-color: #d1ffc2;
+    }
+
+    #aboutSection div {
+        width: 50%;
+        float: left;
+    }
+
+    #aboutSection #pad_down {
+        padding-bottom: 210px;
+    }
+
+    footer .container{
+        justify-content: flex-end;
+    }
+}
+
+@keyframes a {
+    0% {
+        opacity: 1;
+        transform: scale(1) rotateY(0deg);
+    }
+
+    50% {
+        opacity: 0;
+        transform: scale(.8) rotateY(180deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotateY(360deg);
+    }
 }
