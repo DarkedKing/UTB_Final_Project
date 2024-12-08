@@ -77,10 +77,6 @@ p {
     background-position: center center;
 }
 
-#mainInformation {
-    
-}
-
 
 #mainInfo .margin_full {
     color: #d1ffc2;
@@ -96,9 +92,14 @@ p {
     text-align: center;
 }
 
+#aboutSection > h1 {
+    text-align: center;
+}
+
 #aboutSection p {
-    align-self: center;
-    justify-self: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
     color: black;
     padding-top: 10px;
 }
