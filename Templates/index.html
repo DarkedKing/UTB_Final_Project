@@ -1,61 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tourservice</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/CSS/style.css">
-</head>
-
-<body>
-
-    <header id="intro">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <img src="../static/IMG/Log.png" alt="SAI TOURS" class="navbar-brand" width="24" height="30">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#mainInformation">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#tourSection">Tours</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#aboutSection">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contactSection">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+{% block content %}
 
 
-    <section id="mainInfo" class="container">
-        <main class="m-4" id="mainInformation">
-            <h1 class="margin_full">Welcome to your Paradise</h1>
-            <p class="margin_full">
-                <strong>San Andres island</strong>, where you can enjoy different
-                activities like snorklin, dive, land exploring between other. You had no time to lose, see the
-                information below and have a magnificient vacations on this seven colors sea and his cays around.
-            </p>
-        </main>
-    </section>
-
-
-    <section id="tourSection" class="container">
-        <div class="accordion accordion-flush" id="accordionFlushExample">
+<section id="mainInfo" class="container">
+    <main class="m-4" id="mainInformation">
+        <h1 class="margin_full">Welcome to your Paradise</h1>
+        <p class="margin_full">
+            <strong>San Andres island</strong>, where you can enjoy different
+            activities like snorklin, dive, land exploring between other. You had no time to lose, see the
+            information below and have a magnificient vacations on this seven colors sea and his cays around.
+        </p>
+    </main>
+</section>
+<!--        <div class="accordion accordion-flush" id="accordionFlushExample">
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -159,157 +117,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </div>-->
 
 
-    <section id="aboutSection" class="container">
-        <h1>About Us</h1>
-        <div class="container" id="pad_down">
-            <p>
-                it is an enterprise of service with 5 Years on the island, providing to his
-                different clients an unforgettable vacation, giving an excellent attendance and a respectable actitude.
-                The
-                enterprise is conformed at the moment by 3 operators, who avaliable to attend all entering message,
-                put over the activities catalog and be guidance to their respective tour.
-            </p>
-        </div>
-        <div class="container">
-            <figure>
-                <img src="../static/IMG/Logo_ppal.png" alt="Logo_Sai_Tours" class="img-fluid">
-                <figcaption>
-                    <p>
-                    <h5><em><abbr title="San Andres Island Tour">Sai Tours</abbr></em></h5>
-                    <q cite="https://www.weareteachers.com/beach-quotes/"> Beach life is sunshine and
-                        smiles</q>, An emotional quote for inspire to enjoy this great oportunities.
-                    </p>
-                </figcaption>
-            </figure>
-        </div>
-    </section>
-
-
-    <section id="contactSection" class="container d-flex justify-content-center">
-        <div class="row">
-            <div class="col-sm-4 mb-4 mb-sm-0">
-                <div class="card" style="width: 18rem;">
-                    <img src="../static/IMG/Forbes.jfif" class="card-img-top" alt="Reymond Forbes">
-                    <div class="card-body">
-                        <h5 class="card-title">Reymond Forbes</h5>
-                        <p class="card-text">Staff <br> +57 312543228 <br> Rforbes@saitours.co</p>
-                        <a href="#" class="btn btn-primary" onclick="alert('Contacting!')">Contact</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4 mb-4 mb-sm-0">
-                <div class="card" style="width: 18rem;">
-                    <img src="../static/IMG/Hoofman.jfif" class="card-img-top" alt="Natacha Hoofman">
-                    <div class="card-body">
-                        <h5 class="card-title">Natacha Hoofman</h5>
-                        <p class="card-text">Staff <br> +57 3132167278 <br> Nhoofman@saitours.co</p>
-                        <a href="#" class="btn btn-primary" onclick="alert('Contacting!')">Contact</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="../static/IMG/Ward.jfif" class="card-img-top" alt="Becklina Ward">
-                    <div class="card-body">
-                        <h5 class="card-title">Becklina Ward</h5>
-                        <p class="card-text">Manager <br> +57 323654744 <br> Bward@saitours.co</p>
-                        <a href="#" class="btn btn-primary" onclick="alert('Contacting!')">Contact</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="formSection" class="container">
-        <form id="formContact" method="get">
-            <fieldset>
-                <legend class="texted">Contact Us</legend>
-
-                <label for="clientFirstName">
-                    First Name:
-                    <input type="text" name="clientName" id="clientName" placeholder="First Name" required>
-                </label>
-
-                <label for="clientLastName">
-                    Last Name:
-                    <input type="text" name="clientLName" id="clientLName" placeholder="Last Name">
-                </label>   
-
-                <label for="nacionality">
-                    Nacionality:
-                    <input type="text" name="clientNacionality" id="clientNacionality" placeholder="Colombian">
-                </label>
-                <br><br>
-                <label for="clientEmail">
-                    Email:
-                    <input type="email" name="clientEmail" id="clientEmail">
-                </label>
-
-                <label for="clientNumber">
-                    Tel:
-                    <input type="tel" name="cleintTellNumber" id="clientTellNumber" required>
-                </label>
-
-                <label for="services">Tour Service
-                    <select id="selectTours" required>
-                        <option value="Aquiarium">Aquiarium</option>
-                        <option value="Cothoon Cay">Cothoon Cay</option>
-                        <option value="Snooror Cay">Snooror Cay</option>
-                        <option value="Haynes Cay">Haynes Cay</option>
-                        <option value="Johnny Cay" selected>Johnny Cay</option>
-                        <option value="Rocky Cay">Rocky Cay</option>
-                        <option value="Crab Cay">Crab Cay</option>
-                    </select>
-                </label>
-                <br><br>
-
-                <label for="selectDays">
-                    Days
-                    <input type="date" name="firstDay" id="firstDay" required>
-                    /
-                    <input type="date" name="lastDay" id="lastDay" required>
-                </label>
-
-                <label for="peopleAmount">
-                    Host Amount
-                    <input type="number" name="selectAmount" id="selectAmount">
-                </label>
-
-                <label for="selectUnderage">
-                    Any Underage!?<br>
-                    <input type="checkbox" name="underage" id="underage">
-                </label>
-            </fieldset>
-            <br>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-
-
-    <footer>
-        <div class="container" id="footlog">
-            <ul class="linegrid">
-                <li class="lilinegrid"><a class="alinegrid" href="https://twitter.com/julesforrest">Twitter</a></li>
-                <li class="lilinegrid"><a class="alinegrid" href="https://codepen.io/julesforrest">Instagram</a></li>
-                <li class="lilinegrid"><a class="alinegrid" href="mailto:mikrotikshaddy@gmail.com">Email</a></li>
-                <li class="lilinegrid"><a class="alinegrid" href="https://github.com/DarkedKing">Github</a></li>
-                <li class="lilinegrid">
-                    <p>👋</p>
-                </li>
-            </ul>
-            <p>&copy; D4rk'C0dd3r</p>
-        </div>
-    </footer>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-        </script>
-</body>
-
-</html>
+{% endblock %}

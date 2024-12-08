@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section id="aboutSection" class="container">
+
+    <h1>About Us</h1>
+    <div class="container" id="pad_down">
+        <p>
+            it is an enterprise of service with 5 Years on the island, providing to his
+            different clients an unforgettable vacation, giving an excellent attendance and a respectable actitude.
+            The
+            enterprise is conformed at the moment by 3 operators, who avaliable to attend all entering message,
+            put over the activities catalog and be guidance to their respective tour.
+        </p>
+    </div>
+    <div class="container">
+        <figure>
+            <img src="{{ url_for('static', filename='IMG/Logo_ppal.png') }}" alt="Logo_Sai_Tours" class="img-fluid">
+            <figcaption>
+                <p>
+                <h5><em><abbr title="San Andres Island Tour">Sai Tours</abbr></em></h5>
+                <q cite="https://www.weareteachers.com/beach-quotes/"> Beach life is sunshine and
+                    smiles</q>, An emotional quote for inspire to enjoy this great oportunities.
+                </p>
+            </figcaption>
+        </figure>
+    </div>
+
+</section>
+
+{% endblock %}

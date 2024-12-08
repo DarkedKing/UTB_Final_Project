@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<section id="contactSection" class="container d-flex justify-content-center">
+
+    <div class="row">
+        <div class="col-sm-4 mb-4 mb-sm-0">
+            <div class="card" style="width: 18rem;">
+                <img src="{{ url_for('static', filename='IMG/Forbes.jfif') }}" class="card-img-top"
+                    alt="Reymond Forbes">
+                <div class="card-body">
+                    <h5 class="card-title">Reymond Forbes</h5>
+                    <p class="card-text">Staff <br> +57 312543228 <br> Rforbes@saitours.co</p>
+                    <a href="#" class="btn btn-primary" onclick="alert('Contacting!')">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 mb-4 mb-sm-0">
+            <div class="card" style="width: 18rem;">
+                <img src="{{ url_for('static', filename='IMG/Hoofman.jfif') }}" class="card-img-top"
+                    alt="Natacha Hoofman">
+                <div class="card-body">
+                    <h5 class="card-title">Natacha Hoofman</h5>
+                    <p class="card-text">Staff <br> +57 3132167278 <br> Nhoofman@saitours.co</p>
+                    <a href="#" class="btn btn-primary" onclick="alert('Contacting!')">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card" style="width: 18rem;">
+                <img src="{{ url_for('static', filename='IMG/Ward.jfif') }}" class="card-img-top" alt="Becklina Ward">
+                <div class="card-body">
+                    <h5 class="card-title">Becklina Ward</h5>
+                    <p class="card-text">Manager <br> +57 323654744 <br> Bward@saitours.co</p>
+                    <a href="#" class="btn btn-primary" onclick="alert('Contacting!')">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+{% endblock %}

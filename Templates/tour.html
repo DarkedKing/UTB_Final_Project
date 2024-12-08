@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<section id="tourSection" class="container">
+
+    <div class="carousel">
+        <div class="back">
+            <img id="back"
+                src="{{ url_for('static', filename='IMG/esquema-de-boton-circular-de-flecha-hacia-atras-izquierda.png') }}"
+                alt="back" loading="lazy">
+        </div>
+        <div class="images">
+            <div id="img">
+                <img src="{{ url_for('static', filename='IMG/jetsky.jpeg') }}" alt="Jetsky" id="jetsky" loading="lazy">
+            </div>
+            <div class="texto" id="texto">
+                <h3>Proyecto 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit cum dicta quibusdam quo id impedit.
+                    Quod, veritatis velit, laboriosam neque odit delectus nulla facere officia deserunt enim ullam
+                    aperiam amet!</p>
+            </div>
+        </div>
+        <div id="foward" class="foward">
+            <img src="{{ url_for('static', filename='IMG/contorno-del-boton-circular-de-flecha-derecha.png') }}"
+                alt="foward" loading="lazy">
+        </div>
+        <div id="points" class="points">
+
+        </div>
+    </div>
+
+</section>
+
+{% endblock %}

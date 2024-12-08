@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section id="formSection" class="container">
+
+    <form id="formContact" method="get">
+        <fieldset>
+            <legend class="texted">Contact Us</legend>
+
+            <label for="clientFirstName">
+                First Name:
+                <input type="text" name="clientName" id="clientName" placeholder="First Name" required>
+            </label>
+
+            <label for="clientLastName">
+                Last Name:
+                <input type="text" name="clientLName" id="clientLName" placeholder="Last Name">
+            </label>
+
+            <label for="nacionality">
+                Nacionality:
+                <input type="text" name="clientNacionality" id="clientNacionality" placeholder="Colombian">
+            </label>
+            <br><br>
+            <label for="clientEmail">
+                Email:
+                <input type="email" name="clientEmail" id="clientEmail">
+            </label>
+
+            <label for="clientNumber">
+                Tel:
+                <input type="tel" name="cleintTellNumber" id="clientTellNumber" required>
+            </label>
+
+            <label for="services">Tour Service
+                <select id="selectTours" required>
+                    <option value="Aquiarium">Aquiarium</option>
+                    <option value="Cothoon Cay">Cothoon Cay</option>
+                    <option value="Snooror Cay">Snooror Cay</option>
+                    <option value="Haynes Cay">Haynes Cay</option>
+                    <option value="Johnny Cay" selected>Johnny Cay</option>
+                    <option value="Rocky Cay">Rocky Cay</option>
+                    <option value="Crab Cay">Crab Cay</option>
+                </select>
+            </label>
+            <br><br>
+
+            <label for="selectDays">
+                Days
+                <input type="date" name="firstDay" id="firstDay" required>
+                /
+                <input type="date" name="lastDay" id="lastDay" required>
+            </label>
+
+            <label for="peopleAmount">
+                Host Amount
+                <input type="number" name="selectAmount" id="selectAmount">
+            </label>
+
+            <label for="selectUnderage">
+                Any Underage!?<br>
+                <input type="checkbox" name="underage" id="underage">
+            </label>
+        </fieldset>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+</section>
+
+{% endblock %}
