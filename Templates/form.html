@@ -4,37 +4,60 @@
 
 <section id="formSection" class="container">
 
-    <form id="formContact" method="get">
-        <fieldset>
+    <form id="formContact" class="row g-3" method="post">
+
             <legend class="texted">Contact Us</legend>
 
-            <label for="clientFirstName">
-                First Name:
-                <input type="text" name="clientName" id="clientName" placeholder="First Name" required>
-            </label>
+            <div class="col-md-11">
+                <label class="form-label" for="clientFirstName">
+                    First Name:
+                </label>
+                <input class="form-control" type="text" name="clientName" id="clientName" placeholder="First Name"
+                    required>
 
-            <label for="clientLastName">
-                Last Name:
-                <input type="text" name="clientLName" id="clientLName" placeholder="Last Name">
-            </label>
+            </div>
+            <div class="col-md-11">
+                <label class="form-label" for="clientLastName">
+                    Last Name:
+                </label>
+                <input class="form-control" type="text" name="clientLName" id="clientLName" placeholder="Last Name">
+            </div>
 
-            <label for="nacionality">
-                Nacionality:
-                <input type="text" name="clientNacionality" id="clientNacionality" placeholder="Colombian">
-            </label>
-            <br><br>
-            <label for="clientEmail">
-                Email:
-                <input type="email" name="clientEmail" id="clientEmail">
-            </label>
+            <div class="col-md-11">
+                <label class="form-label" for="nacionality">
+                    Nacionality:
+                </label>
+                <input class="form-control" type="text" name="clientNacionality" id="clientNacionality"
+                    placeholder="Colombian">
+            </div>
 
-            <label for="clientNumber">
-                Tel:
-                <input type="tel" name="cleintTellNumber" id="clientTellNumber" required>
-            </label>
+            <div class="col-md-11">
+                <label class="form-label" for="clientEmail">
+                    Email:
+                </label>
+                <input class="form-control" type="email" name="clientEmail" id="clientEmail"
+                    placeholder="Admon@email.com">
+            </div>
 
-            <label for="services">Tour Service
-                <select id="selectTours" required>
+            <div class="col-md-5">
+                <label class="form-label" for="clientNumber">
+                    Tel:
+                </label>
+                <input class="form-control" type="tel" name="cleintTellNumber" id="clientTellNumber" required>
+            </div>
+
+            <div class="col-md-4    ">
+                <label class="form-label" for="selectDays">
+                    Date
+                </label>
+                <input class="form-control" type="date" name="date" id="date" required>
+            </div>
+
+            <div class="col-md-3">
+                <label class="form-label" for="services">
+                    Tour Service
+                </label>
+                <select class="form-select" id="selectTours" name="selectTours" required>
                     <option value="Aquiarium">Aquiarium</option>
                     <option value="Cothoon Cay">Cothoon Cay</option>
                     <option value="Snooror Cay">Snooror Cay</option>
@@ -43,28 +66,24 @@
                     <option value="Rocky Cay">Rocky Cay</option>
                     <option value="Crab Cay">Crab Cay</option>
                 </select>
-            </label>
-            <br><br>
+            </div>
 
-            <label for="selectDays">
-                Days
-                <input type="date" name="firstDay" id="firstDay" required>
-                /
-                <input type="date" name="lastDay" id="lastDay" required>
-            </label>
+            <div class="col-md-1">
+                <label class="form-label" for="peopleAmount">
+                    Host Amount
+                </label>
+                <input class="form-control" type="number" name="selectAmount" id="selectAmount">
+            </div>
 
-            <label for="peopleAmount">
-                Host Amount
-                <input type="number" name="selectAmount" id="selectAmount">
-            </label>
-
-            <label for="selectUnderage">
-                Any Underage!?<br>
-                <input type="checkbox" name="underage" id="underage">
-            </label>
-        </fieldset>
-        <br>
-        <button type="submit">Submit</button>
+            <div class="col-md-12">
+                <div class="form-check">
+                    <label class="form-check-label" for="selectUnderage">
+                        Personal Treatment Autorization
+                    </label>
+                    <input class="form-check-input" type="checkbox" name="inputCheck" id="inputCheck">
+                </div>
+            </div>
+            <input type="submit" class="btn btn-info">
     </form>
 
 </section>

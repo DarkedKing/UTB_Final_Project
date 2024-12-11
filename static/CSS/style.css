@@ -1,3 +1,5 @@
+/* Global Attributes */
+
 * {
     box-sizing: border-box;
 }
@@ -13,55 +15,21 @@ body {
     padding: 0;
 }
 
-/*footer {
-    background-color: rgb(230, 230, 230);
-}*/
-
 footer p {
     margin: 0;
     padding: 2px;
     color: rgb(100, 100, 100);
 }
 
-.linegrid {
-    display: inline-grid;
-    grid-auto-flow: row;
-    grid-gap: 44px;
-    justify-items: center;
-    margin: auto;
-}
-
-.alinegrid {
-    color: white;
-    text-decoration: none;
-    box-shadow: inset 0 -1px 0 hsla(0, 0%, 100%, 0.4);
-}
-
-.alinegrid:hover {
-    box-shadow: inset 0 -1.2em 0 hsla(0, 0%, 100%, 0.4);
-}
-
-.lilinegrid:last-child {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-}
-
-.lilinegrid:hover~li p {
-    animation: wave-animation 0.3s infinite;
-}
-
-/*footer .container {
-    height: 9%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}*/
-
 p {
     margin-top: 1px;
 }
 
+
 /* ID > CLASS > ELEMENT*/
+
+
+/* Main Section */
 
 #mainInfo {
     display: flex;
@@ -88,12 +56,111 @@ p {
     font-size: 1em;
 }
 
+/* Tours Section */
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+.img {
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.85);
+    height: 480px;
+    width: 640px;
+    border-radius: 15px;
+    margin: 5px;
+    object-fit: cover;
+    filter: saturate(175%);
+}
+
+.text {
+    overflow: hidden;
+    position: absolute;
+    flex-direction: column;
+    transform: translateY(0px);
+    margin-bottom: 9px;
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+}
+
+.text h3 {
+    text-shadow: 0px 0px 15px black;
+    padding-top: 40px;
+    color: white;
+    font-weight: 300;
+    font-size: 27px;
+}
+
+.text p {
+    align-items: center;
+    padding: 20px;
+    color: white;
+    font-size: 0px;
+    font-weight: 300;
+}
+
+.images .text {
+    width: 600px;
+    height: 100px;
+    transition: 1s;
+}
+
+.images:hover .text {
+    transition: heigth 1s, trasnform 1s background-color 1s;
+    transform: translateY(-150px);
+    height: 290px;
+    background-color: rgba(63, 106, 138, 0.71);
+}
+
+.images:hover .text p {
+    transition: font-size 0s -2s linear;
+    font-size: 23px;
+    font-weight: 300;
+    text-shadow: 0px 0px 10px #000000;
+}
+
+.puntos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.puntos p {
+    font-size: 100px;
+    font-weight: 500;
+    margin-top: -50px;
+    color: black;
+}
+
+.puntos .bold {
+    font-weight: 700;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #5E17EB;
+}
+
+
+/* About Section */
+
 #aboutSection {
-    background-color: #d1ffc2;
     text-align: center;
 }
 
-#aboutSection > h1 {
+#aboutSection>h1 {
     text-align: center;
 }
 
@@ -105,26 +172,31 @@ p {
     padding-top: 10px;
 }
 
-#aboutSection img {
+#aboutSection>img {
     width: 300px;
     height: auto;
     padding-top: 10px;
 }
 
+
+
+/*   Contact Section   */
+
+
 #contactSection div p {
     color: black;
 }
+
+/*  Forms Section */
 
 #formSection {
     background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
 }
 
-#formsection .tested {
+#formSection .texted {
     text-align: center;
     font-size: 41px;
     font-weight: 600;
-    background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
-    -webkit-text-fill-color: transparent;
 }
 
 #formSection input {
@@ -140,7 +212,6 @@ p {
 }
 
 #formSection input[type=text] {
-    width: 100%;
     padding: 2px 12px;
 }
 
@@ -194,18 +265,16 @@ p {
 }
 
 
-#formSection button {
+/*#formSection button {
     background-color: aquamarine;
     border: none;
     padding: 16px 32px;
     text-decoration: none;
     margin: 4px 2px;
     cursor: pointer;
-}
+}*/
 
 #formSection input[type=email] {
-    width: 100px;
-    height: auto;
     font-size: 1rem;
     border: 1.5px solid #000;
     border-radius: 0.5rem;
@@ -215,8 +284,11 @@ p {
 }
 
 #formSection input[type=email]:focus {
-        box-shadow: 5.5px 7px 0 black;
+    box-shadow: 5.5px 7px 0 black;
 }
+
+
+/* Footer Section */
 
 #footlog {
     display: flex;
@@ -226,7 +298,37 @@ p {
     line-height: 1.3;
 }
 
-@media (max-width: 766px) { 
+.linegrid {
+    display: inline-grid;
+    grid-auto-flow: row;
+    grid-gap: 44px;
+    justify-items: center;
+    margin: auto;
+}
+
+.alinegrid {
+    color: white;
+    text-decoration: none;
+    box-shadow: inset 0 -1px 0 hsla(0, 0%, 100%, 0.4);
+}
+
+.alinegrid:hover {
+    box-shadow: inset 0 -1.2em 0 hsla(0, 0%, 100%, 0.4);
+}
+
+.lilinegrid:last-child {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.lilinegrid:hover~li p {
+    animation: wave-animation 0.3s infinite;
+}
+
+
+/* Media Queries for each resolution */
+
+@media (max-width: 766px) {
 
     #mainInfo {
         font-size: 0.8em;
@@ -251,7 +353,11 @@ p {
     }
 
     #footlog {
-        height: 60vh;
+        height: 75vh;
+    }
+
+    .linegrid {
+        grid-gap: 30px;
     }
 
 }
@@ -277,32 +383,12 @@ p {
         padding-bottom: 160px;
     }
 
-    /*footer .container {
-        justify-content: flex-end;
-    }*/
-
     .linegrid {
         grid-auto-flow: column;
     }
 }
 
 @media (min-width:992px) {
-
-
-    section .container {
-        display: grid;
-        justify-content: center;
-        background-color: #d1ffc2;
-    }
-
-    #aboutSection div {
-        width: 50%;
-        float: left;
-    }
-
-    #aboutSection #pad_down {
-        padding-bottom: 233px;
-    }
 
     /*footer .container {
             justify-content: flex-end;
@@ -332,14 +418,17 @@ p {
 }
 
 @keyframes wave-animation {
+
     0%,
     100% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
+
     25% {
-      transform: rotate(20deg);
+        transform: rotate(20deg);
     }
+
     75% {
-      transform: rotate(-15deg);
+        transform: rotate(-15deg);
     }
 }
